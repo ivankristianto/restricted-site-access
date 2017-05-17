@@ -256,7 +256,7 @@ class Restricted_Site_Access {
 		}
 
 		$redirect_url = apply_filters( 'restricted_site_access_redirect_url', self::$rsa_options['redirect_url'], $wp );
-		$redirect_code = apply_filters( 'restricted_site_access_head', self::$rsa_options['redirect_path'], $wp );
+		$redirect_code = apply_filters( 'restricted_site_access_head', self::$rsa_options['head_code'], $wp );
 		wp_redirect( $redirect_url, $redirect_code );
 		die;
 	}
@@ -481,7 +481,7 @@ class Restricted_Site_Access {
 		self::enqueue_script();
 
 		self::$rsa_options = self::get_options( true );
-		
+
 		add_action( 'wpmu_options', array( __CLASS__, 'show_network_settings' ) );
 		add_action( 'update_wpmu_options', array( __CLASS__, 'save_network_settings' ) );
 	}

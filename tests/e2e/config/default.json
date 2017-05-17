@@ -1,0 +1,13 @@
+{
+	"url": "http://10up.dev",
+	"siteTitle": "Restricted Site Access E2E Testing",
+	"users": {
+		"admin": {
+			"username": "admin",
+			"password": "password"
+		}
+	},
+	"startBrowserTimeoutMs": 30000,
+	"mochaTimeoutMs": 120000,
+	"afterHookTimeoutMs": 30000
+}
